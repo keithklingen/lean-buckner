@@ -2,7 +2,7 @@
 
 ## Description
 
-This is a custom child theme kit for [Lean](http://leantheme.co), crafted by [Jason Bradley](http://jasonbradley.me).
+This is a custom child theme kit for [Lean](http://leantheme.co), crafted by [Brooklyn Creative Design](http://brooklyncreative.com).
 
 The [Lean Buckner](https://github.com/keithklingen/lean-buckner) requires Lean Theme.
 
