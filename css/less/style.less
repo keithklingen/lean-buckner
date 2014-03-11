@@ -1,0 +1,500 @@
+/*!
+Theme Name: Buckner
+Theme URI: http://www.brooklyncreativedesign.com
+Version: 1.3
+Description: A Lean child theme.
+Author: Brooklyn Creative Design
+Author URI: http://brooklyncreativedesign.com
+Author Email: keith@brooklyncreativedesign.com
+License: GNU General Public License v3.0 or later
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
+Template: lean
+*/
+
+
+/* Import Lean Styles
+---------------------------------------------------------------------------------- */
+
+@import url( '../lean/style.css' );
+@import url( '../buckner-lean/social.css' );
+
+/* Uncomment the line below to enable child theme right-to-left language support. */
+/* @import url( '../lean/rtl.css' ); */
+
+/* Uncomment the lines below to add color to your social icons. */
+// Uncomment the line below to add color to your social icons.
+// @import 'social.less';
+
+/* Fonts & Colors
+---------------------------------------------------------------------------------- */
+
+/* Fonts */
+
+@patrick: 'Patrick Hand', cursive;
+@patrick-caps: 'Patrick Hand SC', cursive;
+@oswald: 'Oswald', sans-serif;
+@normal: 400;
+@light: 300;
+@bold: 700;
+
+/* Colors */
+
+@blue: #003366;
+@lt-blue: #c8e4ff;
+@orange: #F26522;
+@black: #666;
+@white: #fff;
+@off-white: #f8f8f8;
+@lt-gray: #ccc;
+
+.border-radius (@radius: 5px) {
+  -moz-border-radius: @radius;
+  -webkit-border-radius: @radius;
+  border-radius: @radius;
+}
+
+@lighten-or-darken:         darken;
+@border-percentage:          10%;
+
+/* Customizations
+---------------------------------------------------------------------------------- */
+
+body {
+	background-color: @white;
+	color: @black;
+	font-weight: @light;
+}
+#wrapper {
+	min-height: 100%;
+	height: auto;
+	margin: 0 auto -60px;
+	padding: 40px 0 60px;
+}
+
+img#header-logo {max-width: 300px;}
+
+#logo {
+	
+	#site-title, #site-title a {
+		color: @white;
+		text-decoration: none;
+		font-weight: @normal;
+		font-size: 32px;
+		line-height: 1;
+		margin: 10px 20px 0 0;
+		font-family: @oswald;
+	}
+	
+	#site-description {
+		color: @lt-gray;
+		font-family: @patrick;
+	}
+	
+	a {
+	
+	&:hover {background: transparent;}
+	}
+}
+
+#header {
+	background-color: @blue;
+	border-bottom: 2px solid darken(@blue, @border-percentage);
+}
+
+#hgroup {
+	margin-top: 100px;
+	
+	.post-title {
+		color: @off-white;
+	}
+}
+
+a.btn.btn-primary {
+	padding: 5px 35px;
+	font-family: @patrick-caps;
+	font-size: 22px;
+	
+	&:hover {
+		background-color: @orange;
+	}
+	}
+
+/* TYPOGRAPHY */
+
+a {
+color: @blue;
+text-decoration: none;
+
+&:hover {
+	background: @orange;
+	color: @black;
+}
+}
+
+/* BUTTONS */
+
+.btn {
+	color: @white;
+	
+	.btn-primary {
+		background: @orange;
+	}
+	
+	.btn-success {
+		background: @black;
+	}
+	
+}
+
+/* NAVIGATION */
+
+.menu-header-container {
+float: right;
+}
+
+.navbar-default,   {
+background-color: @blue;
+border: 1px solid darken(@blue, @border-percentage);
+}
+
+.navbar-fixed-top {
+top: 0;
+border-width: 0 0 1px;
+padding: 20px;
+}
+
+.navbar-fixed-top, .navbar-fixed-bottom {
+border-radius: 0;
+}
+
+.navbar-fixed-top, .navbar-fixed-bottom {
+position: fixed;
+right: 0;
+left: 0;
+z-index: 1030;
+}
+
+#menu-above-header {
+
+			 li a {
+				color: @off-white;
+				font-family: @patrick-caps;
+				font-size: 16px;
+				
+				&:hover {
+					background: lighten(@blue,@border-percentage);
+				}
+			}
+			 
+			  .dropdown-menu a { color: darken(@blue, @border-percentage); 
+				  
+				  &:hover {color: @off-white;}
+			  }
+}
+
+.navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:hover, .navbar-inverse .navbar-nav>.open>a:focus, .navbar-inverse .navbar-nav>.active>a {
+					background: darken(@blue, @border-percentage);
+				}
+
+.page-template-template-homepage-php {
+	#hgroup	{display: none;}
+}
+
+/* BREADCRUMBS */
+
+.row.crumbs {
+	background: @off-white;
+	border-bottom: 1px solid darken(@off-white,@border-percentage);
+	margin: 0;
+	
+	.breadcrumb {
+		background: transparent;
+		margin-bottom: 0;
+		font-family: @oswald;
+		font-weight: @light;
+		float: right;
+	}
+}
+
+/* HOMEPAGE */
+
+.jumbotron {
+	text-align: center;
+	
+	
+	h1 {
+		font-family: @oswald;
+		text-transform: uppercase;
+		font-weight: @bold;
+		color: @blue;
+		padding-bottom: 5px;
+	}
+	
+	p {
+		font-size: 18px;
+	}
+}
+
+.thumbnail {text-align: center;border: none;background: @off-white;border-bottom: 1px solid darken(@off-white,@border-percentage);
+
+	h3 {
+		font-family: @oswald;
+		font-weight: @normal;
+		color: @blue;
+		text-transform: uppercase;
+	}
+	
+	p.intro {
+		font-size: 16px;
+		font-weight: @light;
+		min-height: 200px;
+		color: @black;
+	}
+	
+	&:hover {
+		background-color: darken(@off-white,@border-percentage);
+	}
+}
+
+.thumbnail .thumb-image {
+	width: 100%;
+	height: 200px;
+	padding-bottom: 5px;
+	overflow: hidden;
+}
+
+.thumb-image img {width: 100%}
+
+hr {
+	margin: 60px 0;
+}
+
+.highlight {
+	color: @orange;
+	font-family: @oswald;
+	font-weight: @light;
+	font-size: 45px;
+}
+
+.featurette-image {
+	.border-radius;
+}
+
+/* POST / PAGE HEADER */
+
+.post-header {
+	border-bottom: none;
+	margin: 0;
+}
+
+.post-title {color:@blue;font-family: @oswald;font-weight: normal;}
+.page-description {
+	font-family: @patrick;
+	color: lighten(@blue,30%);
+	font-size: 24px;
+}
+.post {
+	border: none;
+}
+
+.panel-title {
+font-family: @oswald;
+color: @blue;
+}
+
+/* POST TYPES */
+
+.format-quote {
+
+		.post-header {
+		margin-bottom: 5px;
+		padding-bottom: 30px;
+		border-bottom: 0;
+		background-color: @lt-blue;
+		}
+		
+		.entry-content:before {
+		border-color: @lt-blue transparent transparent transparent;
+		}
+}
+
+.format-chat {
+
+	.fa-comments-o {
+	font-size: 48px;
+	color: @blue;
+	}
+}
+
+.format-aside {
+		.aside-date {
+		background: @orange;
+		font-family: @patrick-caps;
+		}
+}
+
+h1.lead {
+	font-family: @oswald;
+	text-transform: uppercase;
+}
+
+/* SIDEBAR */
+
+.widget h4.widget-title {
+margin-bottom: 10px;
+padding-bottom: 10px;
+border-bottom: 1px solid #e0e0e0;
+font-size: 18px;
+line-height: 24px;
+font-family: @oswald;
+text-align: center;
+color: @blue;
+}
+
+/* FOOTER */
+
+#footer {
+height: 60px;
+bottom: 0;
+width: 100%;
+position: fixed;
+
+	& #sub-floor {
+	background-color: #f5f5f5;
+	
+	#credit {
+		font-size: 13px;
+	}
+	
+	#credit a {
+		color: #666;
+		
+		&:hover {
+			color: @blue;
+		}		
+		}
+	}
+	
+	
+}
+
+/* Media Queries
+---------------------------------------------------------------------------------- */
+
+/* Smartphones */
+@media (max-width: 480px) {
+	
+	body {
+		font-size: 14px;
+		line-height: 1.2;
+	}
+	
+	.entry-content {
+		padding: 0 10px 10px;
+	}
+	
+	.entry-content>ul {
+		font-size: 14px;
+		line-height: 1.2;
+		margin: 0 0 20px 0px;
+	}
+	h1 {
+		font-size: 30px;
+	}
+	
+	.navbar-fixed-top {
+		padding: 10px;
+}
+
+	img#header-logo {
+	max-width: 80%;
+	margin-top: 10px;
+	}
+	
+	#hgroup {
+	margin-top: 80px;
+	padding: 0px;
+}
+
+.page-description {
+font-size: 18px;
+}
+	
+	.jumbotron {
+padding: 20px 10px;
+margin-bottom: 30px;
+font-weight: 200;
+line-height: 2.1428571435;
+color: inherit;
+background-color: #eee;
+	
+	p {
+		font-size: 14px;
+		line-height: 1.2;
+	}
+}
+
+p.lead {
+	font-size: 14px;	
+}
+
+hr {
+margin: 20px 0 10px;
+}
+
+.post .thumbnail img {
+width: 100%;
+height: auto;
+}
+
+.thumbnail {
+
+	h3 {
+		font-size: 24px;
+		margin-top: 0px;
+	}
+
+	p.intro {
+	font-size: 14px;
+	font-weight: 300;
+	min-height: 150px;
+	color: #444;
+	}
+}
+	#footer {
+height: 32px;
+font-size: 10px;
+}
+}
+
+/* Tablet & Mobile */
+@media (max-width: 979px) {
+	.menu-header-container {
+		float: left;
+	}
+}
+
+/* Mobile to Tablet */
+@media only screen and (max-width: 767px) {
+
+}
+
+
+/* Landscape Tablets */
+@media (min-width: 768px) and (max-width: 979px) {
+
+}
+
+/* Desktop */
+@media (min-width: 980px) {
+	.menu-header-container {
+	width: 650px;
+	}
+}
+
+/* Desktop */
+@media (min-width: 981px) and (max-width:995px) {
+	.menu-header-container {
+	width: 400px;
+	}
+}
