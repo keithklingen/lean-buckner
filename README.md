@@ -14,7 +14,7 @@ There are two ways to install WordPress themes / child themes: via the WordPress
 
 ### Using the WordPress Dashboard
 
-1. Download the [Lean Lean Buckner](https://github.com/keithklingen/lean-buckner).
+1. Download the [Lean Buckner](https://github.com/keithklingen/lean-buckner).
 2. Locate the "Appearance" menu.
 3. In the "Appearance" menu, click on "Themes".
 4. On the "Themes" page, click on the "Install Themes" tab.
